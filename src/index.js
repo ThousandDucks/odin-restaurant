@@ -1,8 +1,38 @@
 import { loadHome } from "./home-page.js"
-import "./styles.css";
+import { loadContact } from "./contact-page.js"
+import "./styles.css";   
+import "./home-style.css"
+import "./contact-style.css"
 
-// Need to create underline element when hovering over links
 // Recreate the bamboo branch image
 // Maybe add box to popular dishes
 
-loadHome();
+const content = document.getElementById('content');
+const buttons = document.querySelectorAll('header nav button');
+
+function clearContent() {
+  content.innerHTML = '';
+}
+
+function switchTab(tab) {
+    clearContent();
+    
+    content.className = tab + '-page'; 
+
+    switch(tab) {
+        case 'home': loadHome(content); break;
+        case 'menu': loadMenu(content); break;
+        case 'contact': loadContact(content); break;
+    }
+}
+
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        switchTab(btn.dataset.tab);
+    })
+})
+
+
+
+switchTab('home');

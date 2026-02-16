@@ -4,14 +4,15 @@ import saltPepperBoxImage from "../images/salt-pepper-box.png";
 import singaporeNoodlesImage from "../images/singapore-noodles.png";
 
 function loadHome() {
-    const content = document.getElementById("content");
-    content.innerHTML = "";
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+  content.className = "home-page";
 
-    createHero(content);
-    createPopularDishes(content);
-    const sliderElements = createCustomerReviews(content);
-    handleReviewSlider(sliderElements, 5000);
-    createFooter(content);
+  createHero(content);
+  createPopularDishes(content);
+  const sliderElements = createCustomerReviews(content);
+  handleReviewSlider(sliderElements, 5000);
+  createFooter(content);
 }
 
 function createHero(container) {
@@ -258,5 +259,5 @@ function createFooter(container) {
 
 
 
-
+export { createFooter };
 export { loadHome }; 
