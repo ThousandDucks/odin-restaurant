@@ -1,8 +1,10 @@
 import { loadHome } from "./home-page.js"
 import { loadContact } from "./contact-page.js"
+import { loadMenu } from "./menu-page.js"
 import "./styles.css";   
 import "./home-style.css"
 import "./contact-style.css"
+import "./menu-style.css"
 
 // Recreate the bamboo branch image
 // Maybe add box to popular dishes

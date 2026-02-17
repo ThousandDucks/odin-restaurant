@@ -3,7 +3,7 @@ import { createFooter } from "./home-page.js"
 function loadContact() {
     const content = document.getElementById("content");
     content.innerHTML = "";
-    content.className = "contact-page";
+    content.className = "menu-page";
 
     createHero(content);
     createContactForm(content);
